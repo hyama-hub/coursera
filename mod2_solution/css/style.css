@@ -64,8 +64,8 @@ header {
 /*****
 MEDIA QUERIES
 *****/
-/* for 980px or more */
-@media (min-width: 980px) {
+/* for 992px or more */
+@media (min-width: 992px) {
 
 	#pagewrap {
 		width: 100%;
