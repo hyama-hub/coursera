@@ -1,39 +1,147 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content01="width=device-width, initial-scale=1">
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+}
 
-    <title>Boostrap Starter Page</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-<body>
+/* common */
 
-  <div id="pagewrap">
+header h1 {
+  text-align: center;
+  font-size: 2em;
+}
 
-  	<header>
-  		<h1>Our Menu</h1>
-  	</header>
+header {
+	margin-bottom: 5px;
+}
 
-  	<section id="content01">
-      <h2>Chicken</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+#content01, #content02, #content03{
+  position: relative;
+	padding: 5px 15px;
+  height: auto;
+  border: solid 1px #000000;
+  background-color: gray;
+}
 
-  	</section>
+#content01 h2, #content02 h2, #content03 h2{
+  font-size:20px;
+  border-bottom: solid 1px #000000;
+  border-left: solid 1px #000000;
+  position: absolute;
+  right:0px;
+  text-align: center;
+  width: 30%;
+  top:0px;
+  height :30px;
+  box-sizing:border-box;
+  padding: 5px;
+  margin: 0px;
+}
 
-  	<section id="content02">
-  		<h2>Beef</h2>
-  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  	</section>
+#content01 p, #content02 p, #content03 p {
+  color:black;
+  border: 1px;
+  padding-top:20px;
+}
 
-  	<section id="content03">
-  		<h2>Sushi</h2>
-  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  	</section>
+/* content01 */
+#content01 h2{
+  background-color: #FF69B4;
+}
+
+/* content02 */
+
+#content02 h2{
+    background-color: red;
+    color:white;
+}
+
+/* content03 */
+
+#content03 h2{
+    background-color: yellow;
+}
+
+/*****
+MEDIA QUERIES
+*****/
+/* for 980px or more */
+@media (min-width: 980px) {
+
+	#pagewrap {
+		width: 100%;
+	}
+
+	#content01 {
+    box-sizing: border-box;
+		width: 30%;
+		margin: 2% 1.11% 2% 2.22%;
+    float: left;
+	}
+
+	#content02 {
+    box-sizing: border-box;
+		width: 30%;
+		margin: 2% 1.11% 2% 1.11%;
+    float: left;
+	}
+
+	#content03 {
+    box-sizing: border-box;
+    float:right;
+    width: 30%;
+		margin: 2% 2.22% 2% 1.11%;
+	}
+
+}
+
+/* between 768px and 991px */
+@media screen and (min-width: 768px) and (max-width: 991px)  {
+
+	#content01 {
+    box-sizing: border-box;
+		width: 47%;
+    margin: 2% 1% 1% 2%;
+		float: left;
+	}
+
+	#content02 {
+    box-sizing: border-box;
+    width: 47%;
+    margin: 2% 2% 1% 1%;
+		float: right;
+	}
+
+	#content03 {
+    box-sizing: border-box;
+		width: 96%;
+    margin: 1% 2% 2% 2%;
+    float:right;
+	}
+
+}
+
+/* between 0px and 767px */
+@media screen and (min-width: 0px) and (max-width: 767px)  {
 
 
-  </div>
+  #content01 {
+    box-sizing: border-box;
+		width: 96%;
+    margin: 2% 2% 1% 2%;
+		float: left;
+	}
 
-</body>
-</html>
+	#content02 {
+    box-sizing: border-box;
+		width: 96%;
+    margin: 1% 2% 1% 2%;
+		float: left;
+	}
+
+	#content03 {
+    box-sizing: border-box;
+		width: 96%;
+    margin: 1% 2% 1% 2%;
+		float: right;
+	}
+}
