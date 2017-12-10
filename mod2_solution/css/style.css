@@ -1,0 +1,205 @@
+@@ -0,0 +1,204 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+}
+
+/* STRUCTURE */
+
+header h1 {
+	height: 100px;
+  text-align: center;
+}
+
+/* content */
+
+#content {
+  position: relative;
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
+  height: auto;
+}
+
+#content h2 {
+  font-size:20px;
+  border-bottom: solid 2px #000000;
+  border-left: solid 2px #000000;
+  background-color: #FFC0CB;
+  position: absolute;
+  right:0px;
+  text-align: center;
+  width: 30%;
+  top:0px;
+  height :30px;
+  box-sizing:border-box;
+  padding: 5px;
+  margin: 0px;
+
+}
+
+#content p{
+  color:black;
+  border: 1px;
+  padding-top:30px;
+}
+
+/* middle */
+#middle {
+  position: relative;
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
+  height: auto;
+}
+
+#middle h2 {
+  font-size:20px;
+  border-bottom: solid 2px #000000;
+  border-left: solid 2px #000000;
+  background-color: red;
+  position: absolute;
+  right:0px;
+  text-align: center;
+  width: 30%;
+  top:0px;
+  height :30px;
+  box-sizing:border-box;
+  padding: 5px;
+  margin: 0px;
+}
+
+#middle p{
+  color:black;
+  border: 1px;
+  padding-top:30px;
+}
+
+/* sidebar */
+
+#sidebar {
+  position: relative;
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
+  height: auto;
+}
+
+#sidebar h2 {
+  font-size:20px;
+  border-bottom: solid 2px #000000;
+  border-left: solid 2px #000000;
+  background-color: 	#F0E68C;
+  position: absolute;
+  right:0px;
+  text-align: center;
+  width: 30%;
+  top:0px;
+  height :30px;
+  box-sizing:border-box;
+  padding: 5px;
+  margin: 0px;
+}
+
+#sidebar p{
+  color:black;
+  border: 1px;
+  padding-top:30px;
+}
+
+
+
+#middle {
+	width: 294px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+}
+footer {
+	clear: both;
+	padding: 0 15px;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+
+	#pagewrap {
+		width: 100%;
+	}
+	#content {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+	#content {
+		width: auto;
+		float: none;
+	}
+
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+	header {
+		height: auto;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	#sidebar {
+		display: none;
+	}
+
+}
+
+
+#sidebar {
+	background: #f0efef;
+}
+header, #content, #middle, #sidebar {
+	margin-bottom: 5px;
+}
+
+#header, #content, #middle, #sidebar{
+	border: solid 2px #000000;
+  background-color: gray;
+}
