@@ -1,63 +1,31 @@
-@@ -0,0 +1,204 @@
 body {
   font-family: 'Open Sans', sans-serif;
   color: #666;
 }
 
-/* STRUCTURE */
+/* common */
 
 header h1 {
-	height: 100px;
   text-align: center;
+  font-size: 2em;
 }
 
-/* content */
+header {
+	margin-bottom: 5px;
+}
 
-#content {
+#content01, #content02, #content03{
   position: relative;
-	width: 290px;
-	float: left;
 	padding: 5px 15px;
   height: auto;
+  border: solid 1px #000000;
+  background-color: gray;
 }
 
-#content h2 {
+#content01 h2, #content02 h2, #content03 h2{
   font-size:20px;
-  border-bottom: solid 2px #000000;
-  border-left: solid 2px #000000;
-  background-color: #FFC0CB;
-  position: absolute;
-  right:0px;
-  text-align: center;
-  width: 30%;
-  top:0px;
-  height :30px;
-  box-sizing:border-box;
-  padding: 5px;
-  margin: 0px;
-
-}
-
-#content p{
-  color:black;
-  border: 1px;
-  padding-top:30px;
-}
-
-/* middle */
-#middle {
-  position: relative;
-	width: 290px;
-	float: left;
-	padding: 5px 15px;
-  height: auto;
-}
-
-#middle h2 {
-  font-size:20px;
-  border-bottom: solid 2px #000000;
-  border-left: solid 2px #000000;
-  background-color: red;
+  border-bottom: solid 1px #000000;
+  border-left: solid 1px #000000;
   position: absolute;
   right:0px;
   text-align: center;
@@ -69,137 +37,111 @@ header h1 {
   margin: 0px;
 }
 
-#middle p{
+#content01 p, #content02 p, #content03 p {
   color:black;
   border: 1px;
-  padding-top:30px;
+  padding-top:20px;
 }
 
-/* sidebar */
-
-#sidebar {
-  position: relative;
-	width: 290px;
-	float: left;
-	padding: 5px 15px;
-  height: auto;
+/* content01 */
+#content01 h2{
+  background-color: #FF69B4;
 }
 
-#sidebar h2 {
-  font-size:20px;
-  border-bottom: solid 2px #000000;
-  border-left: solid 2px #000000;
-  background-color: 	#F0E68C;
-  position: absolute;
-  right:0px;
-  text-align: center;
-  width: 30%;
-  top:0px;
-  height :30px;
-  box-sizing:border-box;
-  padding: 5px;
-  margin: 0px;
+/* content02 */
+
+#content02 h2{
+    background-color: red;
+    color:white;
 }
 
-#sidebar p{
-  color:black;
-  border: 1px;
-  padding-top:30px;
+/* content03 */
+
+#content03 h2{
+    background-color: yellow;
 }
 
-
-
-#middle {
-	width: 294px; /* Account for margins + border values */
-	float: left;
-	padding: 5px 15px;
-	margin: 0px 5px 5px 5px;
-}
-
-#sidebar {
-	width: 270px;
-	padding: 5px 15px;
-	float: left;
-}
-footer {
-	clear: both;
-	padding: 0 15px;
-}
-
-/************************************************************************************
+/*****
 MEDIA QUERIES
-*************************************************************************************/
-/* for 980px or less */
-@media screen and (max-width: 980px) {
+*****/
+/* for 980px or more */
+@media (min-width: 99) {
 
 	#pagewrap {
 		width: 100%;
 	}
-	#content {
-		width: 41%;
-		padding: 1% 4%;
+
+	#content01 {
+    box-sizing: border-box;
+		width: 30%;
+		margin: 2% 1.11% 2% 2.22%;
+    float: left;
 	}
-	#middle {
-		width: 41%;
-		padding: 1% 4%;
-		margin: 0px 0px 5px 5px;
+
+	#content02 {
+    box-sizing: border-box;
+		width: 30%;
+		margin: 2% 1.11% 2% 1.11%;
+    float: left;
+	}
+
+	#content03 {
+    box-sizing: border-box;
+    float:right;
+    width: 30%;
+		margin: 2% 2.22% 2% 1.11%;
+	}
+
+}
+
+/* between 768px and 991px */
+@media screen and (min-width: 768px) and (max-width: 991px)  {
+
+	#content01 {
+    box-sizing: border-box;
+		width: 47%;
+    margin: 2% 1% 1% 2%;
+		float: left;
+	}
+
+	#content02 {
+    box-sizing: border-box;
+    width: 47%;
+    margin: 2% 2% 1% 1%;
 		float: right;
 	}
 
-	#sidebar {
-		clear: both;
-		padding: 1% 4%;
-		width: auto;
-		float: none;
+	#content03 {
+    box-sizing: border-box;
+		width: 96%;
+    margin: 1% 2% 2% 2%;
+    float:right;
 	}
 
 }
 
-/* for 700px or less */
-@media screen and (max-width: 600px) {
+/* between 0px and 767px */
+@media screen and (min-width: 0px) and (max-width: 767px)  {
 
-	#content {
-		width: auto;
-		float: none;
+
+  #content01 {
+    box-sizing: border-box;
+		width: 96%;
+    margin: 2% 2% 1% 2%;
+		float: left;
 	}
 
-	#middle {
-		width: auto;
-		float: none;
-		margin-left: 0px;
+	#content02 {
+    box-sizing: border-box;
+		width: 96%;
+    margin: 1% 2% 1% 2%;
+		float: left;
 	}
 
-	#sidebar {
-		width: auto;
-		float: none;
+	#content03 {
+    box-sizing: border-box;
+		width: 96%;
+    margin: 1% 2% 1% 2%;
+		float: right;
 	}
-
-}
-
-/* for 480px or less */
-@media screen and (max-width: 480px) {
-
-	header {
-		height: auto;
-	}
-	h1 {
-		font-size: 2em;
-	}
-	#sidebar {
-		display: none;
-	}
-
-}
-
-
-#sidebar {
-	background: #f0efef;
-}
-header, #content, #middle, #sidebar {
-	margin-bottom: 5px;
-}
-
-#header, #content, #middle, #sidebar{
-	border: solid 2px #000000;
-  background-color: gray;
 }
