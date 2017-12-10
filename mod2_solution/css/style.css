@@ -69,7 +69,7 @@ header {
 MEDIA QUERIES
 *****/
 /* for 992px or more */
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
 
 	#content01 {
     box-sizing: border-box;
